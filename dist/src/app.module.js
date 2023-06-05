@@ -13,7 +13,7 @@ const app_service_1 = require("./app.service");
 const gateway_module_1 = require("./gateway/gateway.module");
 const path_1 = require("path");
 const serve_static_1 = require("@nestjs/serve-static");
-const staticPath = (0, path_1.join)(__dirname, '../../', 'client', 'dist', 'client');
+const staticPath = (0, path_1.join)(__dirname, '../../', 'dist', 'client', 'src');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([

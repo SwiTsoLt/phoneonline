@@ -1,0 +1,9 @@
+<div class="app">
+  <div class="container">
+    <p>Мой номер: <strong>{{ phone }}</strong></p>
+    <input #phoneNumber (keydown.enter)="call(phoneNumber.value)" type="text">
+    <button class="bgimage" (click)="call(phoneNumber.value)"></button>
+    <div class="errorMessage">{{ errorMessage }}</div>
+  </div>
+  <audio #audioPlayer></audio>
+</div>
