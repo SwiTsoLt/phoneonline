@@ -10,13 +10,24 @@ export class WebRtcService {
 
     private pc: RTCPeerConnection | null = null;
 
-    constructor(private ws: WebSocketService) {}
+    constructor(private ws: WebSocketService) { }
 
     public init() {
         const config: RTCConfiguration = {
             'iceServers': [
                 {
-                    'urls': ['stun:stun.l.google.com:19302', 'stun:stun1.l.google.com:19302', 'stun:stun2.l.google.com:19302', 'stun:stun3.l.google.com:19302', 'stun:stun4.l.google.com:19302']
+                    username: undefined,
+                    credential: undefined,
+                    // @ts-ignoreL
+                    url: 'stun:stun.voiparound.com',
+                    urls: ['stun:stun.voiparound.com']
+                },
+                {
+                    username: undefined,
+                    credential: undefined,
+                    // @ts-ignoreL
+                    url: 'stun:stun.voxgratia.org',
+                    urls: ['stun:stun.voxgratia.org']
                 }
             ]
         };
